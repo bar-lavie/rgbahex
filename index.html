@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rgba to hex/rgb converter</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="wrapper-inner">
+
+      <div class="header">
+        <h1>Get HEX value from opacity color</h1>
+      </div>
+
+      <div class="content">
+        <p>Sometimes you just need the HEX value of a color that has opacity.</p>
+        <br>
+        <p>Just select the main color (background color is optional, since it's usually white)</p>
+      </div>
+      <div class="pickers-wrapper">
+        <div class="color-picker-wrapper">
+          <span>Main color</span>
+          <div class="color-picker-rgba"></div>
+        </div>
+        <div class="color-picker-wrapper">
+          <span>Background color</span>
+          <div class="color-picker-background"></div>
+        </div>
+      </div>
+      <form>
+        <input type="hidden" name="rgba" id="rgba" value="rgba(84, 104, 255, 0.5)" />
+        <input type="hidden" name="background" id="background" value="#fff" />
+        </label>
+        <button type="submit">Calculate</button>
+      </form>
+
+      <div id="result-wrapper">
+        <div id="result" data-clipboard-text=""></div>
+      </div>
+    </div>
+
+    <footer>Made with <img width="10" src="./love.svg" alt=""> by <a target="_blank" href="https://barzioni.com">Bar
+        Zioni</a> | thanks to <a target="_blank" href="https://github.com/Simonwep">Simonwep</a> for the heavy lifting
+      (<a target="_blank" href="https://github.com/Simonwep/pickr">pickr.js</a>)
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+  <script src="index.min.js"></script>
+</body>
+
+</html>
